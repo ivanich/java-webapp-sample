@@ -1,35 +1,52 @@
 package com.sample.service.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.dozer.Mapper;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class GenericDao {
+public abstract class GenericDao {
 
 	@Autowired
 	private SessionFactory sessionFactory;
 	@Autowired
 	private Mapper mapper;
 
-	protected <T> List<T> mapList(List<?> list){
-//		
-//		List<?> mappedList = new ArrayList<T>();
-//		
-//		if(!CollectionUtils.isEmpty(list)){
-//			for (Object record : list) {
-//				T mappedRecord = (T) getMapper().map(record,);
-//				mappedList.add(mappedRecord);
-//			}
-//		}
-//		
-//		return mappedList;
-		return null;
+	/**
+	 * This method is used to convert a single DTO <=> Entity
+	 * @param origRecord
+	 * @param mappedType
+	 * @return
+	 */
+	protected final <S,T> T map(S origRecord, Class<T> mappedType){
+		return getMapper().map(origRecord, mappedType);
 	}
-	
+
+	/**
+	 * This method is used to convert a DTO list <=> Entity list
+	 * @param list
+	 * @param mapppedType
+	 * @return
+	 */
+	protected final <S,T> List<?> mapList(List<S> list, Class<T> mapppedType){
+
+		List<T> mappedList = new ArrayList<T>();
+
+		if(!CollectionUtils.isEmpty(list)){
+			for (S record : list) {
+				T mappedRecord = getMapper().map(record, mapppedType);
+				mappedList.add(mappedRecord);
+			}
+		}
+
+		return mappedList;
+	}
+
 	/**
 	 * @return the mapper
 	 */

@@ -18,12 +18,13 @@ public class Person implements Serializable{
 	private String lastName;
 	
 	/**
-	 * 
+	 * Empty Constructor
 	 */
 	public Person() {
 		super();
 	}
 	/**
+	 * Minimal Constructor
 	 * @param id
 	 */
 	public Person(String id) {
