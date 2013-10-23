@@ -5,9 +5,9 @@
 
 	<configuration>
 		<custom-converters>
-			<converter type="org.dozer.converters.TestCustomConverter">
-				<class-a>org.dozer.vo.CustomDoubleObject</class-a>
-				<class-b>java.lang.Double</class-b>
+			<converter type="com.sample.service.converter.PersonDtoConverter">
+				<class-a>com.sample.common.dto.PersonDto</class-a>
+				<class-b>com.sample.service.entity.Person</class-b>
 			</converter>
 		</custom-converters>
 	</configuration>

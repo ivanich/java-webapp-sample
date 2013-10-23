@@ -2,10 +2,10 @@ package com.sample.common.dto;
 
 public class PersonDto {
 
-	String id;
-	String firstName;
-	String middleName;
-	String lastName;
+	private String id;
+	private String firstName;
+	private String middleName;
+	private String lastName;
 	
 	/**
 	 * 
