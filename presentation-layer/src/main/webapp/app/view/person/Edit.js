@@ -11,16 +11,22 @@ Ext.define('MyApp.view.person.Edit', {
         this.items = [
             {
                 xtype:'form',
+                bodyPadding : 5,
                 items:[
                     {
                         xtype:'textfield',
-                        name:'name',
-                        fieldLabel:'Name'
+                        name:'firstName',
+                        fieldLabel:'First Name'
+                    },
+                    {
+                    	xtype:'textfield',
+                    	name:'middleName',
+                    	fieldLabel:'Middle Name'
                     },
                     {
                         xtype:'textfield',
-                        name:'email',
-                        fieldLabel:'Email'
+                        name:'lastName',
+                        fieldLabel:'Last Name'
                     },
                     {
                         xtype:'hidden',

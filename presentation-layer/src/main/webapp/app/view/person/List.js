@@ -9,8 +9,10 @@ Ext.define('MyApp.view.person.List', {
         console.log("{MyApp.view.person.List} init person.List view");
 
         this.columns = [
-            {header:'Name', dataIndex:'name', flex:1},
-            {header:'Email', dataIndex:'email', flex:1}
+            {header:'ID', dataIndex:'id', flex:1},
+            {header:'First Name', dataIndex:'firstName', flex:1},
+            {header:'Middle Name', dataIndex:'middleName', flex:1},
+            {header:'Last Name', dataIndex:'lastName', flex:1}
         ];
 
         this.buttons = [

@@ -4,13 +4,14 @@ Ext.define('MyApp.store.People', {
     autoLoad:true,
 
     proxy:{
-        type:'ajax',
-        api:{
-            read:'services/person/list.json',
-            update:'services/person/update.json'
+        type:'rest',
+        url : 'services/person',
+        reader: {
+            type: 'json'
+//            root: 'person'
         },
-        reader:{
-            type:'json'
+        writer: {
+            type: 'json'
         }
     }
 });
