@@ -39,8 +39,8 @@ Ext.define('MyApp.view.person.Edit', {
 
         this.buttons = [
             {
-                text:'Save',
-                action:'save'
+                text:'Update',
+                action:'update'
             },
             {
                 text:'Cancel',

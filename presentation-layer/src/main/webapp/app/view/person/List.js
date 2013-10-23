@@ -17,8 +17,14 @@ Ext.define('MyApp.view.person.List', {
 
         this.buttons = [
             {
-                text:'Sync',
-                action:'sync'
+                text:'Add Person',
+                action:'add'
+            },{
+            	text:'Edit Person',
+            	action:'edit'
+            },{
+	            text:'Delete Person',
+	            action:'delete'
             }
         ];
 

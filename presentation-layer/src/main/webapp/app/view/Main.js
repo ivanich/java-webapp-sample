@@ -4,21 +4,15 @@ Ext.define('MyApp.view.Main', {
 
     requires:[
         'MyApp.view.person.List',
-        'MyApp.view.person.Edit'
+        'MyApp.view.person.Edit',
+        'MyApp.view.person.Add'
     ],
 
     initComponent:function ()
     {
         this.items = {items: [
             {
-                xtype: 'container'
-                , html:'<div>Double-Click to edit</div>'
-                , style: {
-                    padding: '10px',
-                    font: '1.2em'
-                }
-            },
-            {
+            	padding : 10,
                 xtype:'personlist'
             }
         ]};

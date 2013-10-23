@@ -2,6 +2,8 @@ package com.sample.common.dto;
 
 public class PersonDto {
 
+	public static final String RESOURCE_NAME="person";
+	
 	private String id;
 	private String firstName;
 	private String middleName;
