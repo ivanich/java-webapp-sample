@@ -12,7 +12,8 @@ Ext.application({
     launch:function ()
     {
         this.viewport = Ext.create('MyApp.view.Main', {
-            application:this
+            application:this,
+            bodyStyle : 'background-color: black'
         });
     }
 });
