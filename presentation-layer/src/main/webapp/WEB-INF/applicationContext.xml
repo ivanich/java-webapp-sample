@@ -11,6 +11,9 @@
 	<bean id="restRootUrl" class="java.lang.String">
 		<constructor-arg value="http://localhost:8080/service-layer/" />
 	</bean>
+	<bean id="presRestRoot" class="java.lang.String">
+		<constructor-arg value="services" />
+	</bean>
 
 	<bean id="jacksonMessageConverter"
 		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"></bean>
